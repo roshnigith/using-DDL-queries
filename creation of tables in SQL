@@ -91,3 +91,17 @@ SQL> desc Issue;
  ROLLNO                                             NUMBER
  ISBN                                               NUMBER
  DATEOFISSUE                                        DATE
+ select * from book;
+
+      ISBN BTITLE                    AUTHOR
+---------- ------------------------- -------------------------
+PUBLISHER                      PRICE
+------------------------- ----------
+      1525 DBMS                      XYZ
+ABC                             2345
+
+      1524 DBMS                      XYZ
+ABC                             2345
+
+      1526 DAA                       MNP
+DEF                             4545
