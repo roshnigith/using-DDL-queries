@@ -1,0 +1,93 @@
+SQL> create table student1(rollno  number,Sname varchar2(10),Fname varchar2(20),branch varchar2(5));
+
+Table created.
+
+SQL> create table book(ISBN number,Btitle varchar2(25),Author varchar2(25),publisher varchar2(25),price number);
+
+Table created.
+
+SQL> create table Issue(rollno number,ISBN number,date dateOfIssue);
+create table Issue(rollno number,ISBN number,date dateOfIssue)
+                                             *
+ERROR at line 1:
+ORA-00904: : invalid identifier
+
+
+SQL> create table Issue(rollno number,ISBN number, dateOfIssue date);
+
+Table created.
+
+SQL> insert into student1 values(234,'roshni','VKS','CSE');
+
+1 row created.
+
+SQL> insert into student1 values(235,'sabir','JMS','CSE');
+
+1 row created.
+
+SQL> insert into student1 values(236,'rohini','NMG','CSE');
+
+1 row created.
+
+SQL> insert into student1 values(237,'raman','STS','CSE');
+
+1 row created.
+
+SQL> insert into Issue values(234,1524,'STS','11 mar 2020');
+insert into Issue values(234,1524,'STS','11 mar 2020')
+            *
+ERROR at line 1:
+ORA-00913: too many values
+
+
+SQL> insert into Issue values(234,1524,'11 mar 2020');
+
+1 row created.
+
+SQL> insert into Issue values(235,1525,'11 aug 2020');
+
+1 row created.
+
+SQL> insert into Issue values(236,1525,'22 jan 2020');
+
+1 row created.
+
+SQL> insert into Issue values(237,1526,'22 dec 2020');
+
+1 row created.
+
+SQL> insert into book values(1525,'DBMS','XYZ','ABC',2345);
+
+1 row created.
+
+SQL> insert into book values(1524,'DBMS','XYZ','ABC',2345);
+
+1 row created.
+
+SQL> insert into book values(1526,'DAA','MNP','DEF',4545);
+
+1 row created.
+
+SQL> desc student1;
+ Name                                      Null?    Type
+ ----------------------------------------- -------- ----------------------------
+ ROLLNO                                             NUMBER
+ SNAME                                              VARCHAR2(10)
+ FNAME                                              VARCHAR2(20)
+ BRANCH                                             VARCHAR2(5)
+
+SQL> desc book;
+ Name                                      Null?    Type
+ ----------------------------------------- -------- ----------------------------
+ ISBN                                               NUMBER
+ BTITLE                                             VARCHAR2(25)
+ AUTHOR                                             VARCHAR2(25)
+ PUBLISHER                                          VARCHAR2(25)
+ PRICE                                              NUMBER
+
+SQL> desc Issue;
+ Name                                      Null?    Type
+ ----------------------------------------- -------- ----------------------------
+ ROLLNO                                             NUMBER
+ ISBN                                               NUMBER
+ DATEOFISSUE                                        DATE
