@@ -105,3 +105,12 @@ ABC                             2345
 
       1526 DAA                       MNP
 DEF                             4545
+//union operation
+select sname from student1,Issue,book where student1.rollno=Issue.rollno and book.ISBN=issue.ISBN and book.btitle='DBMS' union select sname from student1,Issue,book where student1.rollno=Issue.rollno and book.ISBN=Issue.ISBN and book.btitle='DAA';
+
+SNAME
+----------
+raman
+rohini
+roshni
+sabir
