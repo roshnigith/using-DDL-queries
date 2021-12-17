@@ -163,3 +163,14 @@ OUTPUT:-
 1|jayant|M|1|M
 2|megha|F|2|F
 3|Rekha|F|3|F
+
+//Outer join 
+select student.id,student.name,student.gender,teachers.deptid,teachers.gender 
+from student 
+left join teachers 
+on student.id=teachers.deptid;
+
+OUTPUT:-
+1|jayant|M|1|M
+2|megha|F|2|F
+3|Rekha|F|3|F
